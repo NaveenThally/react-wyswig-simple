@@ -1,53 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import Label from './Label';
 import './style.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      html: "React Content is inn here"
-    };
-    this.applyStyle = this.applyStyle.bind(this);
-  }
-  handleChange = (event) => {
-    this.setState({ html: event.target.value }, () => { console.log(this.state.html); });
-  };
+/**
+ * Simple WYSWIG editor
+ * @supports BOLD, ITALIC, UNDERLINE
+ */
+function Wyswig() {
 
-  applyStyle(styleParam) {
-    console.log('Styles s', styleParam.target.value)
-    var sel = window.getSelection();
-    console.log('Slece', document.getSelection());
+  /**
+   * This is the place to edit when you need to add more options to your WYSWIG
+   */
+  function applyStyle(styleParam) {
     document.execCommand(styleParam.target.value, false, '');
   }
 
-  render() {
-    return (
-      <div className='editor'>
+  return (
+    <div className='editor'>
       <div className='editorOptions'>
-      <button
+        <button
           value="bold"
-          onClick={ this.applyStyle }>
+          onClick={applyStyle}>
           B
         </button>
         <button
           value="italic"
-          onClick={ this.applyStyle }>
+          onClick={applyStyle}>
           I
         </button>
         <button
           value="underline"
-          onClick={ this.applyStyle }>
+          onClick={applyStyle}>
           U
         </button>
       </div>
       <div className='editorContent'>
-        <Label html={this.state.html} onChange={this.handleChange} />
+      <p contentEditable></p>
       </div>
-      </div>
-    );
-  }
+    </div>
+  );
 }
 
-render(<App />, document.getElementById('root'));
+
+render(<Wyswig />, document.getElementById('root'));
