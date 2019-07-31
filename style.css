@@ -1,0 +1,27 @@
+
+h1, p {
+  font-family: Lato;
+}
+
+p{
+  border: 1px solid rgb(185, 183, 183);
+  width: 270px;
+  height: 100px;
+  margin-top:0px;
+}
+
+.editor{
+ 
+}
+
+.editorOptions {
+}
+
+.editorOptions > button {
+  border:1px solid #ccc;
+  border-radius: 2px;
+  width:25px;
+  height:25px;
+  background-color: #fff;
+  margin-right: 1px;
+}
