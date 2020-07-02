@@ -4,16 +4,17 @@ h1, p {
 }
 
 p{
-  border: 1px solid rgb(185, 183, 183);
-  width: 270px;
+  border: 1px solid rgb(90, 88, 88);
+  width: 80vw;
   height: 100px;
   margin-top:0px;
+  padding: 4px;
 }
 
 .editorOptions > button {
-  border:1px solid #ccc;
+  border:1px solid rgb(90, 88, 88);
   border-radius: 2px;
-  width:25px;
+  width:30px;
   height:25px;
   background-color: #fff;
   margin-right: 1px;

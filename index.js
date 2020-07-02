@@ -26,12 +26,47 @@ function Wyswig() {
         <button
           value="italic"
           onClick={applyStyle}>
-          I
+         I
         </button>
         <button
           value="underline"
           onClick={applyStyle}>
           U
+        </button>
+        <button
+          value="cut"
+          onClick={applyStyle}>
+          CT
+        </button>
+        <button
+          value="copy"
+          onClick={applyStyle}>
+          CP
+        </button>
+        <button
+          value="justifyLeft"
+          onClick={applyStyle}>
+          LA
+        </button>
+        <button
+          value="justifyCenter"
+          onClick={applyStyle}>
+          CA
+        </button>
+        <button
+          value="justifyRight"
+          onClick={applyStyle}>
+          RA
+        </button>
+         <button
+          value="undo"
+          onClick={applyStyle}>
+          UD
+        </button>
+        <button
+          value="redo"
+          onClick={applyStyle}>
+          RD
         </button>
       </div>
       <div className='editorContent'>
